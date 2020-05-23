@@ -1,13 +1,7 @@
 ---
 # tasks
 
-- name: add HAProxy repository
-  apt_repository:
-    repo: 'ppa:vbernat/haproxy-{{ haproxy_version }}'
-    state: present
-    validate_certs: no
-
-- name: install HAProxy "{{ haproxy_version }}"
+- name: install HAProxy
   apt:
     name: haproxy
     state: present
